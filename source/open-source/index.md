@@ -21,7 +21,9 @@ Includes api clients for 13 job boards including:
 - [ZipRecruiter](/open-source/ziprecruiter)
 
 ## Job board API demo application
-More information is coming soon on this project.
+Interested in using one or more job board APIs in your PHP application? This [demo project](http://demo.jobapis.com/) should help you get started.
+
+The demo application is built on the [Slim PHP framework](http://www.slimframework.com/), and is [open source](https://github.com/jobapis/jobs-common-demo) so you can use it as a starting point for your next project.
 
 ## Job board data collector
 More information is coming soon on this project.
