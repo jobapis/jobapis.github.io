@@ -69,6 +69,6 @@ theme: clean-blog
 ## Docs: https://hexo.io/docs/deployment.html
 deploy:
   type: git
-  repo: git@github.com:jobapis/jobbrander.github.io.git
+  repo: git@github.com:jobapis/jobapis.github.io.git
   branch: master
   message: Deployed to Github pages

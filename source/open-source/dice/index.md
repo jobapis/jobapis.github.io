@@ -56,4 +56,4 @@ $jobs = $client->getJobs();
 
 This will return a [Collection](https://github.com/jobapis/jobs-common/blob/master/src/Collection.php) of [Job](https://github.com/jobapis/jobs-common/blob/master/src/Job.php) objects.
 
-For more detailed usage and documentation, see [this project's readme](https://github.com/JobBrander/jobs-dice#usage)
+For more detailed usage and documentation, see [this project's readme](https://github.com/jobapis/jobs-dice#usage)
