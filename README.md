@@ -1,4 +1,4 @@
-# jobbrander.github.io
+# JobApis documentation site
 
 Built on Hexo. See [commands](https://hexo.io/docs/commands.html) to get started.
 
