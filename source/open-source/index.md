@@ -3,8 +3,8 @@ title: Open Source
 date: 2016-08-21 14:18:39
 ---
 
-## [Job board API clients](/open-source/job-board-apis)
-Includes api clients for 13 job boards including:
+## [Jobs Common API Clients](https://github.com/jobapis/jobs-common)
+We offer PHP API clients for 13 job boards including:
 
 - [Authentic Jobs](/open-source/authentic)
 - [CareerBuilder](/open-source/careerbuilder)
@@ -19,6 +19,15 @@ Includes api clients for 13 job boards including:
 - [JuJu](/open-source/juju)
 - [SimplyHired](/open-source/simplyhired)
 - [ZipRecruiter](/open-source/ziprecruiter)
+
+[Jobs Common on Github](https://github.com/jobapis/jobs-common)
+
+## [Jobs Multi](https://github.com/jobapis/jobs-multi)
+Jobs Multi allows you access to multiple job board APIs with a single client. This uses the providers above to standardize both input and output.
+
+While you get more flexibility using individual job board clients, Jobs Multi makes it easier to do common queries on multiple providers without writing a lot of code.
+
+[Jobs Multi on Github](https://github.com/jobapis/jobs-multi)
 
 ## Job board API demo application
 Interested in using one or more job board APIs in your PHP application? This [demo project](http://demo.jobapis.com/) should help you get started.
