@@ -1,6 +1,9 @@
 ---
 title: Querying multiple job board APIs at once
 date: 2016-09-11 15:28:59
+tags:
+- releases
+- jobs-multi
 ---
 
 Today marks the first pre-release of [Jobs-Multi](https://github.com/jobapis/jobs-multi), a package intented to help you access multiple job board APIs in PHP with less work.

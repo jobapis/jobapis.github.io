@@ -1,5 +1,9 @@
 title: Github Jobs now available in Jobs Common v2
 date: 2016-09-07 20:52:03
+tags: 
+- releases 
+- clients
+- github
 ---
 
 The [Github Jobs API provider](https://github.com/jobapis/jobs-github) has hit a version 1.0 release, which is now compatible with [Jobs Common v2](http://www.jobapis.com/2016/09/03/jobs-common-v2-release/).

@@ -2,6 +2,8 @@
 title: What's this?
 date: 2016-08-21
 author: Karl Hughes
+tags:
+- announcements
 ---
 A few years ago I started working on a website to help entry level job
 seekers find employment. In doing so, I discovered that job board data

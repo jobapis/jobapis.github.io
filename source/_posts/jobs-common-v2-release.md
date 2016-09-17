@@ -2,6 +2,9 @@
 title: Jobs Common Version 2 Release
 date: 2016-09-03
 author: Karl Hughes
+tags:
+- releases
+- jobs-common
 ---
 
 For the past year or so I've been meaning to invest the time in a version 2 of the [Jobs Common](https://github.com/jobapis/jobs-common) package, and I finally got around to releasing it this morning.
