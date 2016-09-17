@@ -4,7 +4,7 @@ date: 2016-08-21 14:18:39
 ---
 
 ## [Jobs Common API Clients](https://github.com/jobapis/jobs-common)
-We offer PHP API clients for 13 job boards including:
+We offer PHP API clients for many job boards:
 
 - [Authentic Jobs](/open-source/authentic)
 - [CareerBuilder](/open-source/careerbuilder)
@@ -18,6 +18,7 @@ We offer PHP API clients for 13 job boards including:
 - [Muse](/open-source/muse)
 - [JuJu](/open-source/juju)
 - [SimplyHired](/open-source/simplyhired)
+- [USAJobs](/open-source/usajobs)
 - [ZipRecruiter](/open-source/ziprecruiter)
 
 [Jobs Common on Github](https://github.com/jobapis/jobs-common)
