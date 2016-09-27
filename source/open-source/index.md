@@ -3,6 +3,15 @@ title: Open Source
 date: 2016-08-21 14:18:39
 ---
 
+## [JobsToMail](https://github.com/jobapis/jobs-to-mail)
+JobsToMail is like having a personal assistant for your job search.
+
+Just sign up at [JobsToMail.com](http://www.jobstomail.com/), choose the search term and location you’d like to search, and we’ll send you new job listings every day.
+
+Alternatively, JobsToMail is open source, so you can deploy it to your own server completely free of charge.
+
+[JobsToMail on Github](https://github.com/jobapis/jobs-to-mail) | [JobsToMail.com](http://www.jobstomail.com/)
+
 ## [Jobs Common API Clients](https://github.com/jobapis/jobs-common)
 We offer PHP API clients for many job boards:
 
@@ -29,14 +38,6 @@ Jobs Multi allows you access to multiple job board APIs with a single client. Th
 While you get more flexibility using individual job board clients, Jobs Multi makes it easier to do common queries on multiple providers without writing a lot of code.
 
 [Jobs Multi on Github](https://github.com/jobapis/jobs-multi)
-
-## Job board API demo application
-Interested in using one or more job board APIs in your PHP application? This [demo project](http://demo.jobapis.com/) should help you get started.
-
-The demo application is built on the [Slim PHP framework](http://www.slimframework.com/), and is [open source](https://github.com/jobapis/jobs-common-demo) so you can use it as a starting point for your next project.
-
-## Job board data collector
-More information is coming soon on this project.
 
 ## Miscellaneous projects
 More open source projects for PHP developers that we contribute to:
