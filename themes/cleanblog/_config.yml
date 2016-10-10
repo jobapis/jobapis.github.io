@@ -1,0 +1,41 @@
+# Header
+menu:
+  Open Source: /open-source
+  # Blog: /blog
+  Services: /services
+  Contact: /contact
+
+# Title on top left of menu. Leave empty to use main blog title
+menu_title:
+
+# URL of the Home page image
+index_cover: https://i.imgur.com/fn7238d.png
+
+# Default post title
+default_post_title: Untitled
+
+# Comments. Choose one by filling up the information
+comments:
+  # Disqus comments
+  disqus_shortname:
+  # Facebook comments
+  facebook:
+    appid:
+    comment_count: 5
+    comment_colorscheme: light
+
+# Google Analytics Tracking ID
+google_analytics: UA-19700764-9
+
+# Addthis ID
+addthis:
+
+# Social Accounts
+twitter_url: https://twitter.com/jobapis
+twitter_handle: JobApis
+facebook_url:
+github_url: https://github.com/jobapis
+gitlab_url:
+linkedin_url:
+rss_url: /rss.xml
+mailto: info@jobbrander.com
