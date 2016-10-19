@@ -15,6 +15,7 @@ Alternatively, JobsToMail is open source, so you can deploy it to your own serve
 ## [Jobs Common API Clients](https://github.com/jobapis/jobs-common)
 We offer PHP API clients for many job boards:
 
+- [Adzuna Jobs](/open-source/adzuna)
 - [Authentic Jobs](/open-source/authentic)
 - [CareerBuilder](/open-source/careerbuilder)
 - [Careercast](/open-source/careercast)
