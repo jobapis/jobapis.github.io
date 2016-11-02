@@ -4,7 +4,7 @@ date: 2016-10-18 21:13:55
 tags:
 - releases 
 - clients
-- careercast
+- adzuna
 ---
 
 Our latest PHP job board client is for [Adzuna](https://github.com/jobapis/jobs-adzuna) a largely European job board with a private API for registered partners. You can [register to use Adzuna's API here](https://developer.adzuna.com/admin), and get started using this API client by including the package in your project's composer file:
