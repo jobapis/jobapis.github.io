@@ -21,11 +21,19 @@ The basic flow for our token-based login is as follows:
 
 #### 1. Click `Login` and enter email
 
+![Login with email](/images/email.png)
+
 #### 2. Check email account for the token
+
+It may take a few seconds for the email to reach you.
 
 #### 3. Enter your token OR click the link in the email
 
+![Login with email](/images/token.png)
+
 #### 4. You will be immediately logged in
+
+![Login with email](/images/logged-in.png)
 
 ### Notes about token-based login on JobsToMail.com
 
