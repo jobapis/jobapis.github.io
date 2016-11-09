@@ -19,6 +19,7 @@ We offer PHP API clients for many job boards:
 - [Authentic Jobs](/open-source/authentic)
 - [CareerBuilder](/open-source/careerbuilder)
 - [Careercast](/open-source/careercast)
+- [Careerjet](/open-source/careerjet)
 - [Dice](/open-source/dice)
 - [Elance](/open-source/elance)
 - [Github Jobs](/open-source/github)
