@@ -24,6 +24,7 @@ We offer PHP API clients for many job boards:
 - [Elance](/open-source/elance)
 - [Github Jobs](/open-source/github)
 - [Government Jobs](/open-source/govt)
+- [IEEE](/open-source/ieee)
 - [Indeed](/open-source/indeed)
 - [Jobinventory](/open-source/jobinventory)
 - [Jobs2Careers](/open-source/jobs2careers)
