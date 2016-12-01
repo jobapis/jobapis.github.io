@@ -12,6 +12,11 @@ Alternatively, JobsToMail is open source, so you can deploy it to your own serve
 
 [JobsToMail on Github](https://github.com/jobapis/jobs-to-mail) | [JobsToMail.com](http://www.jobstomail.com/)
 
+## [JobsMulti](https://github.com/jobapis/jobs-multi)
+JobsMulti is the ultimate job board API client. With this package, PHP developers can access multiple job board APIs with a single client and a few lines of code. Currently supports over 12 job boards.
+
+[JobsMulti Landing Page](/open-source/jobs-multi) | [JobsMulti on Github](https://github.com/jobapis/jobs-multi)
+
 ## [Jobs Common API Clients](https://github.com/jobapis/jobs-common)
 We offer PHP API clients for many job boards:
 
@@ -36,13 +41,6 @@ We offer PHP API clients for many job boards:
 - [ZipRecruiter](/open-source/ziprecruiter)
 
 [Jobs Common on Github](https://github.com/jobapis/jobs-common)
-
-## [Jobs Multi](https://github.com/jobapis/jobs-multi)
-Jobs Multi allows you access to multiple job board APIs with a single client. This uses the providers above to standardize both input and output.
-
-While you get more flexibility using individual job board clients, Jobs Multi makes it easier to do common queries on multiple providers without writing a lot of code.
-
-[Jobs Multi on Github](https://github.com/jobapis/jobs-multi)
 
 ## Miscellaneous projects
 More open source projects for PHP developers that we contribute to:
