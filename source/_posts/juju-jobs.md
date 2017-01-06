@@ -2,7 +2,7 @@
 title: Juju job board API client now available in Jobs Common v2
 date: 2016-10-03 21:29:24
 tags:
-- releases 
+- releases
 - clients
 - juju
 ---
