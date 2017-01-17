@@ -15,7 +15,7 @@ Today we released our 17th job board client using version 2.0 of the [Jobs Commo
 Install the package using Composer:
 
 ```
-composer require jobapis/jobs-monster
+composer require jobapis/jobs-craigslist
 ```
 
 Then create a query object with all the parameters you'd like to use:

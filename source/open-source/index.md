@@ -37,6 +37,7 @@ We offer PHP API clients for many job boards:
 - [JuJu](/open-source/juju)
 - [Monster.com](/open-source/monster)
 - [Muse](/open-source/muse)
+- [PHPJobs.com](/open-source/phpjobs)
 - [SimplyHired](/open-source/simplyhired)
 - [Stack Overflow](/open-source/stackoverflow)
 - [USAJobs](/open-source/usajobs)
