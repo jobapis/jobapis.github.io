@@ -4,7 +4,7 @@ date: 2017-01-17 16:04:02
 ---
 
 ## Project Overview
-Use the Jobs Common PHPJobs Provider to connect your PHP application with the Muse job board API.
+Use the Jobs Common PHPJobs Provider to connect your PHP application with the PHPJobs RSS feed.
 
 - [Github](https://github.com/jobapis/jobs-phpjobs)
 - [Packagist](https://packagist.org/packages/jobapis/jobs-phpjobs)
