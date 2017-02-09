@@ -2,8 +2,8 @@
 menu:
   Open Source: /open-source
   # Blog: /blog
-  Services: /services
   Contact: /contact
+  Github: https://github.com/jobapis
 
 # Title on top left of menu. Leave empty to use main blog title
 menu_title:
