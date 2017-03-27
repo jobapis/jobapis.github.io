@@ -3,6 +3,8 @@ title: Open Source
 date: 2016-08-21 14:18:39
 ---
 
+We maintain dozens of free open source projects for software developers interested in jobs and job board APIs. Below are some highlights, but you can find more on [Github](https://github.com/jobapis). 
+
 ## [JobsToMail](https://github.com/jobapis/jobs-to-mail)
 JobsToMail is like having a personal assistant for your job search.
 

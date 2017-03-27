@@ -1,15 +1,14 @@
 # Header
 menu:
+  Jobs Hub: /hub
   Open Source: /open-source
-  # Blog: /blog
   Contact: /contact
-  Github: https://github.com/jobapis
 
 # Title on top left of menu. Leave empty to use main blog title
 menu_title:
 
 # URL of the Home page image
-index_cover: https://i.imgur.com/fn7238d.png
+index_cover: https://i.imgur.com/lXy757s.png # https://i.imgur.com/BAXrTLf.jpg
 
 # Default post title
 default_post_title: Untitled
@@ -38,4 +37,4 @@ github_url: https://github.com/jobapis
 gitlab_url:
 linkedin_url:
 rss_url: /rss.xml
-mailto: admin@jobapis.com
+mailto: info@jobapis.com
