@@ -108,11 +108,11 @@
     
       <category term="clients" scheme="https://jobapis.github.io/tags/clients/"/>
     
-      <category term="rss" scheme="https://jobapis.github.io/tags/rss/"/>
-    
       <category term="careers-in-government" scheme="https://jobapis.github.io/tags/careers-in-government/"/>
     
       <category term="goremote" scheme="https://jobapis.github.io/tags/goremote/"/>
+    
+      <category term="rss" scheme="https://jobapis.github.io/tags/rss/"/>
     
   </entry>
   
@@ -182,9 +182,9 @@
     
       <category term="clients" scheme="https://jobapis.github.io/tags/clients/"/>
     
-      <category term="craigslist" scheme="https://jobapis.github.io/tags/craigslist/"/>
-    
       <category term="rss" scheme="https://jobapis.github.io/tags/rss/"/>
+    
+      <category term="craigslist" scheme="https://jobapis.github.io/tags/craigslist/"/>
     
   </entry>
   
