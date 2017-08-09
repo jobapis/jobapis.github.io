@@ -1,0 +1,360 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>JobApis</title>
+  <subtitle>Making job board and company data more accessible.</subtitle>
+  <link href="/rss.xml" rel="self"/>
+  
+  <link href="https://jobapis.github.io/"/>
+  <updated>2017-08-09T20:51:08.000Z</updated>
+  <id>https://jobapis.github.io/</id>
+  
+  <author>
+    <name>Karl Hughes</name>
+    
+  </author>
+  
+  <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Jobs Hub</title>
+    <link href="https://jobapis.github.io/2017/03/27/jobs-hub-release/"/>
+    <id>https://jobapis.github.io/2017/03/27/jobs-hub-release/</id>
+    <published>2017-03-27T07:49:15.000Z</published>
+    <updated>2017-08-09T20:51:08.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>For the past three years, JobApis has been primarily focused on building open source software surrounding job boards and accessing job board data. We’ve gotten to work on <a href="/open-source/">a lot of interesting projects</a>, and made some exciting contributions to the open source community.</p>
+<p>After fielding hundreds of questions via email and Github, we’ve started to notice some trends. The most striking was that a number of non-developers were finding our code and then contacting us to ask for custom implementations or recommendations for developers who could help them build something with our open source tools.</p>
+<p>At this point, supporting every user with one-on-one help isn’t possible, but this week we’re announcing the release of our first software as a service product for developers and non-developers who want to use job board data in their next venture:</p>
+<h2 id="What-is-Jobs-Hub"><a href="#What-is-Jobs-Hub" class="headerlink" title="What is Jobs Hub?"></a>What is <a href="/hub/">Jobs Hub</a>?</h2><p><a href="/hub/">Jobs Hub</a> is a tool that collects job listings and associated data from job boards and aggregators around the internet. You can read more on the product’s page, but with it, you can do things like:</p>
+<ul>
+<li>Monitor the web for new jobs matching specific search criteria and locations</li>
+<li>Build niche job board backfill</li>
+<li>Create custom job search services for clients or customers</li>
+</ul>
+<p>Let’s say you want to keep up with all the companies hiring <code>Ruby Developers</code> in <code>Chicago, IL</code>. Jobs Hub will pull in all the listings it can find every day and allow you to search them in real-time as they’re available via our simple JSON API.</p>
+<p>Jobs Hub builds on the open source technology that we support, so while we still encourage developers to build tools of their own, Jobs Hub will save them a lot of time.</p>
+<p>More use cases and demos of <a href="/hub/">Jobs Hub</a> will be coming soon, but if you’d like to learn more or get a quote, contact Karl at <a href="mailto:admin@jobapis.com" target="_blank" rel="external">admin@jobapis.com</a> with some information about your project.</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;For the past three years, JobApis has been primarily focused on building open source software surrounding job boards and accessing job bo
+    
+    </summary>
+    
+    
+      <category term="jobs hub, releases, products" scheme="https://jobapis.github.io/tags/jobs-hub-releases-products/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Jobs2Careers Job Board Api Client v.2 Released</title>
+    <link href="https://jobapis.github.io/2017/02/14/j2c-api-client/"/>
+    <id>https://jobapis.github.io/2017/02/14/j2c-api-client/</id>
+    <published>2017-02-14T04:13:55.000Z</published>
+    <updated>2017-08-09T20:51:08.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>Jobs2Careers support has been on hold since last year’s release of Jobs Common v2. Thanks to some help from <a href="https://github.com/arbet" target="_blank" rel="external">Samer Bechara</a> we have gotten the package up and running again. It is now supported by <a href="https://github.com/jobapis/jobs-multi" target="_blank" rel="external">Jobs Multi as well</a>.</p>
+<p>Get started using this API client by including the package in your project’s composer file:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">composer require jobapis/jobs-jobs2careers</div></pre></td></tr></table></figure>
+<p>As with all <a href="https://github.com/jobapis/jobs-common" target="_blank" rel="external">Jobs Common</a> providers, you first need to create a Query:</p>
+<figure class="highlight php"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">$query = <span class="keyword">new</span> JobApis\Jobs\Client\Queries\J2cQuery([</div><div class="line">    <span class="string">'id'</span> =&gt; YOUR_PUBLISHER_ID,</div><div class="line">    <span class="string">'pass'</span> =&gt; YOUR_PUBLISHER_PASSWORD,</div><div class="line">    <span class="string">'q'</span> =&gt; <span class="string">'engineer'</span>,</div><div class="line">    <span class="string">'l'</span> =&gt; <span class="string">'Chicago, IL'</span>,</div><div class="line">]);</div></pre></td></tr></table></figure>
+<p>And inject it into the <code>J2cProvider</code>:</p>
+<figure class="highlight php"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">$client = <span class="keyword">new</span> JobApis\Jobs\Client\Providers\J2cProvider($query);</div><div class="line">$jobs = $client-&gt;getJobs();</div></pre></td></tr></table></figure>
+<p>This will return a <a href="https://github.com/jobapis/jobs-common/blob/master/src/Collection.php" target="_blank" rel="external">Collection</a> of <a href="https://github.com/jobapis/jobs-common/blob/master/src/Job.php" target="_blank" rel="external">Job</a> objects.</p>
+<p>For more detailed usage and documentation, see <a href="https://github.com/jobapis/jobs-jobs2careers#usage" target="_blank" rel="external">this project’s readme</a>, and as always, feel free to contact us if you’d like to get involved.</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;Jobs2Careers support has been on hold since last year’s release of Jobs Common v2. Thanks to some help from &lt;a href=&quot;https://github.com/a
+    
+    </summary>
+    
+    
+      <category term="releases" scheme="https://jobapis.github.io/tags/releases/"/>
+    
+      <category term="clients" scheme="https://jobapis.github.io/tags/clients/"/>
+    
+      <category term="jobs2careers" scheme="https://jobapis.github.io/tags/jobs2careers/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Careers in Government and GoRemote RSS Clients Released</title>
+    <link href="https://jobapis.github.io/2017/02/09/careers-in-gov-goremote-clients/"/>
+    <id>https://jobapis.github.io/2017/02/09/careers-in-gov-goremote-clients/</id>
+    <published>2017-02-08T23:33:19.000Z</published>
+    <updated>2017-08-09T20:51:08.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>This month, we released two new job board clients: <a href="https://careersingovernment.com/" target="_blank" rel="external">CareersInGovernment.com</a> (<a href="https://github.com/jobapis/jobs-careersingov" target="_blank" rel="external">Github</a>) and <a href="https://goremote.io/" target="_blank" rel="external">GoRemote.io</a> (<a href="https://github.com/jobapis/jobs-goremote" target="_blank" rel="external">Github</a>). Both of these clients use RSS feeds to get the latest job listings.</p>
+<p>Usage for each is pretty simple as there are no parameters that can be injected in the Query Objects.</p>
+<h3 id="Careers-in-Government"><a href="#Careers-in-Government" class="headerlink" title="Careers in Government"></a><a href="https://github.com/jobapis/jobs-careersingov" target="_blank" rel="external">Careers in Government</a></h3><p>Install <a href="https://packagist.org/packages/jobapis/jobs-careersingov" target="_blank" rel="external">the package</a> with Composer, and require the vendor file in your project. After the package is installed, you can get the latest listings in a couple lines of code:</p>
+<figure class="highlight php"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">$client = <span class="keyword">new</span> CareersInGovProvider(<span class="keyword">new</span> CareersInGovQuery());</div><div class="line">$jobs = $client-&gt;getJobs();</div></pre></td></tr></table></figure>
+<p>For more detailed documentation see this <a href="https://github.com/jobapis/jobs-careersingov/blob/master/README.md" target="_blank" rel="external">project’s readme file</a>.</p>
+<h3 id="GoRemote"><a href="#GoRemote" class="headerlink" title="GoRemote"></a><a href="https://github.com/jobapis/jobs-goremote" target="_blank" rel="external">GoRemote</a></h3><p>Install <a href="https://packagist.org/packages/jobapis/jobs-goremote" target="_blank" rel="external">the package</a> with Composer, and require the vendor file in your project. After the package is installed, you can get the latest listings in a couple lines of code:</p>
+<figure class="highlight php"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">$client = <span class="keyword">new</span> GoRemoteProvider(<span class="keyword">new</span> GoRemoteQuery());</div><div class="line">$jobs = $client-&gt;getJobs();</div></pre></td></tr></table></figure>
+<p>For more detailed documentation see this <a href="https://github.com/jobapis/jobs-goremote/blob/master/README.md" target="_blank" rel="external">project’s readme file</a>.</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;This month, we released two new job board clients: &lt;a href=&quot;https://careersingovernment.com/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;CareersInGov
+    
+    </summary>
+    
+    
+      <category term="releases" scheme="https://jobapis.github.io/tags/releases/"/>
+    
+      <category term="clients" scheme="https://jobapis.github.io/tags/clients/"/>
+    
+      <category term="rss" scheme="https://jobapis.github.io/tags/rss/"/>
+    
+      <category term="careers-in-government" scheme="https://jobapis.github.io/tags/careers-in-government/"/>
+    
+      <category term="goremote" scheme="https://jobapis.github.io/tags/goremote/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>PHPJobs.com RSS Client Released</title>
+    <link href="https://jobapis.github.io/2017/01/17/phpjobs-com/"/>
+    <id>https://jobapis.github.io/2017/01/17/phpjobs-com/</id>
+    <published>2017-01-17T07:21:31.000Z</published>
+    <updated>2017-08-09T20:51:08.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>We now support PHPJobs.com’s RSS feed of job using the <a href="https://github.com/jobapis/jobs-common" target="_blank" rel="external">Jobs Common framework</a>. With this client, you can quickly access the job search RSS feed on PHPJobs.com in your projects. Here’s an example of the library in action:</p>
+<h3 id="Usage"><a href="#Usage" class="headerlink" title="Usage"></a>Usage</h3><p>Install the package using Composer:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">composer require jobapis/jobs-phpjobs</div></pre></td></tr></table></figure>
+<p>Then create a query object with all the parameters you’d like to use:</p>
+<figure class="highlight php"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// Add parameters to the query via the constructor</span></div><div class="line">$query = <span class="keyword">new</span> JobApis\Jobs\Client\Queries\PhpjobsQuery([</div><div class="line">    <span class="string">'search_string'</span> =&gt; <span class="string">'zend'</span></div><div class="line">]);</div></pre></td></tr></table></figure>
+<p>And inject the query object into the provider:</p>
+<figure class="highlight php"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$client = <span class="keyword">new</span> JobApis\Jobs\Client\Provider\CraigslistProvider($query);</div></pre></td></tr></table></figure>
+<p>Finally, call the “getJobs” method to retrieve results:</p>
+<figure class="highlight php"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// Get a Collection of Jobs</span></div><div class="line">$jobs = $client-&gt;getJobs();</div></pre></td></tr></table></figure>
+<p>Check out more examples or <a href="https://github.com/jobapis/jobs-phpjobs" target="_blank" rel="external">contribute to the project on Github</a>.</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;We now support PHPJobs.com’s RSS feed of job using the &lt;a href=&quot;https://github.com/jobapis/jobs-common&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Jo
+    
+    </summary>
+    
+    
+      <category term="releases" scheme="https://jobapis.github.io/tags/releases/"/>
+    
+      <category term="clients" scheme="https://jobapis.github.io/tags/clients/"/>
+    
+      <category term="rss" scheme="https://jobapis.github.io/tags/rss/"/>
+    
+      <category term="phpjobs" scheme="https://jobapis.github.io/tags/phpjobs/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Craigslist Jobs RSS Feed Client for PHP</title>
+    <link href="https://jobapis.github.io/2017/01/12/craigslist/"/>
+    <id>https://jobapis.github.io/2017/01/12/craigslist/</id>
+    <published>2017-01-12T07:21:31.000Z</published>
+    <updated>2017-08-09T20:51:08.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>Today we released our 17th job board client using version 2.0 of the <a href="https://github.com/jobapis/jobs-common" target="_blank" rel="external">Jobs Common framework</a>, a Craigslist job search RSS feed client. Using this client, you can quickly access the job search RSS feed on Craigslist in your PHP projects. Here’s an example of the library in action:</p>
+<h3 id="Usage"><a href="#Usage" class="headerlink" title="Usage"></a>Usage</h3><p>Install the package using Composer:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">composer require jobapis/jobs-craigslist</div></pre></td></tr></table></figure>
+<p>Then create a query object with all the parameters you’d like to use:</p>
+<figure class="highlight php"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// Add parameters to the query via the constructor</span></div><div class="line">$query = <span class="keyword">new</span> JobApis\Jobs\Client\Queries\CraigslistQuery([</div><div class="line">    <span class="string">'location'</span> =&gt; <span class="string">'chicago'</span>,    <span class="comment">// Craigslist location. Full list of locations here: https://sites.google.com/site/clsiteinfo/city-site-code-sort</span></div><div class="line">    <span class="string">'query'</span> =&gt; <span class="string">'sales'</span>,         <span class="comment">// Search query</span></div><div class="line">    <span class="string">'s'</span> =&gt; <span class="string">'100'</span>,               <span class="comment">// Offset results</span></div><div class="line">]);</div></pre></td></tr></table></figure>
+<p>And inject the query object into the provider:</p>
+<figure class="highlight php"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$client = <span class="keyword">new</span> JobApis\Jobs\Client\Provider\CraigslistProvider($query);</div></pre></td></tr></table></figure>
+<p>Finally, call the “getJobs” method to retrieve results:</p>
+<figure class="highlight php"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// Get a Collection of Jobs</span></div><div class="line">$jobs = $client-&gt;getJobs();</div></pre></td></tr></table></figure>
+<p>Check out more examples or <a href="https://github.com/jobapis/jobs-craigslist" target="_blank" rel="external">contribute to the project on Github</a>.</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;Today we released our 17th job board client using version 2.0 of the &lt;a href=&quot;https://github.com/jobapis/jobs-common&quot; target=&quot;_blank&quot; rel
+    
+    </summary>
+    
+    
+      <category term="releases" scheme="https://jobapis.github.io/tags/releases/"/>
+    
+      <category term="clients" scheme="https://jobapis.github.io/tags/clients/"/>
+    
+      <category term="craigslist" scheme="https://jobapis.github.io/tags/craigslist/"/>
+    
+      <category term="rss" scheme="https://jobapis.github.io/tags/rss/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Monster.com RSS Client and theMuse.com API Client Released</title>
+    <link href="https://jobapis.github.io/2017/01/06/monster-muse/"/>
+    <id>https://jobapis.github.io/2017/01/06/monster-muse/</id>
+    <published>2017-01-06T06:28:11.000Z</published>
+    <updated>2017-08-09T20:51:08.000Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="Monster-com-Jobs-RSS-feed-client"><a href="#Monster-com-Jobs-RSS-feed-client" class="headerlink" title="Monster.com Jobs RSS feed client"></a>Monster.com Jobs RSS feed client</h2><p>Monster.com’s official API is closed to most users (they have not responded to multiple requests for access), but their RSS feed provides a small subset of their jobs. Unfortunately, results are only from the past 24 hours, so this client won’t work for all applications. Using the client is pretty much the same as most RSS feed providers we support:</p>
+<h3 id="1-Install-the-package-via-Composer"><a href="#1-Install-the-package-via-Composer" class="headerlink" title="1. Install the package via Composer"></a>1. Install the package via Composer</h3><p><code>composer require jobapis/jobs-monster</code></p>
+<h3 id="2-Create-a-query-object-with-all-API-parameters"><a href="#2-Create-a-query-object-with-all-API-parameters" class="headerlink" title="2. Create a query object with all API parameters"></a>2. Create a query object with all API parameters</h3><figure class="highlight php"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">$query = <span class="keyword">new</span> JobApis\Jobs\Client\Queries\MonsterQuery([</div><div class="line">    <span class="string">'q'</span> =&gt; <span class="string">'engineering'</span>, <span class="comment">// Keyword</span></div><div class="line">    <span class="string">'where'</span> =&gt; <span class="string">'chicago'</span>, <span class="comment">// Location</span></div><div class="line">    <span class="string">'p'</span> =&gt; <span class="string">'1'</span>, <span class="comment">// Page number</span></div><div class="line">]);</div></pre></td></tr></table></figure>
+<h3 id="3-Inject-the-query-object-and-get-jobs"><a href="#3-Inject-the-query-object-and-get-jobs" class="headerlink" title="3. Inject the query object and get jobs"></a>3. Inject the query object and get jobs</h3><figure class="highlight php"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">$client = <span class="keyword">new</span> JobApis\Jobs\Client\Provider\MonsterProvider($query);</div><div class="line">$jobs = $client-&gt;getJobs();</div></pre></td></tr></table></figure>
+<p>This will return a <a href="https://github.com/jobapis/jobs-common/blob/master/src/Collection.php" target="_blank" rel="external">Collection</a> of <a href="https://github.com/jobapis/jobs-common/blob/master/src/Job.php" target="_blank" rel="external">Job</a> objects.</p>
+<p>For more detailed usage and documentation, see <a href="https://github.com/jobapis/jobs-monster#usage" target="_blank" rel="external">this project’s readme</a></p>
+<h2 id="The-Muse-Jobs-API-client"><a href="#The-Muse-Jobs-API-client" class="headerlink" title="The Muse Jobs API client"></a>The Muse Jobs API client</h2><p>We also re-released our Muse API client with support for Jobs Common v.2 and the Muse’s v.2 of their API. Their API still does not support a true “keyword” search, but the category field allows you to search by types of jobs. Usage is similar to the above client:</p>
+<h3 id="1-Install-the-package-via-Composer-1"><a href="#1-Install-the-package-via-Composer-1" class="headerlink" title="1. Install the package via Composer"></a>1. Install the package via Composer</h3><p><code>composer require jobapis/jobs-muse</code></p>
+<h3 id="2-Create-a-query-object-with-all-API-parameters-1"><a href="#2-Create-a-query-object-with-all-API-parameters-1" class="headerlink" title="2. Create a query object with all API parameters"></a>2. Create a query object with all API parameters</h3><figure class="highlight php"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">$query = <span class="keyword">new</span> JobApis\Jobs\Client\Queries\MuseQuery([</div><div class="line">    <span class="string">'category'</span> =&gt; <span class="string">'Engineering'</span>,</div><div class="line">    <span class="string">'location'</span> =&gt; <span class="string">'Chicago, IL'</span>,</div><div class="line">]);</div></pre></td></tr></table></figure>
+<h3 id="3-Inject-the-query-object-and-get-jobs-1"><a href="#3-Inject-the-query-object-and-get-jobs-1" class="headerlink" title="3. Inject the query object and get jobs"></a>3. Inject the query object and get jobs</h3><figure class="highlight php"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">$client = <span class="keyword">new</span> JobApis\Jobs\Client\Provider\MuseProvider($query);</div><div class="line">$jobs = $client-&gt;getJobs();</div></pre></td></tr></table></figure>
+<p>This will return a <a href="https://github.com/jobapis/jobs-common/blob/master/src/Collection.php" target="_blank" rel="external">Collection</a> of <a href="https://github.com/jobapis/jobs-common/blob/master/src/Job.php" target="_blank" rel="external">Job</a> objects.</p>
+<p>For more detailed usage and documentation, see <a href="https://github.com/jobapis/jobs-muse#usage" target="_blank" rel="external">this project’s readme</a></p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;Monster-com-Jobs-RSS-feed-client&quot;&gt;&lt;a href=&quot;#Monster-com-Jobs-RSS-feed-client&quot; class=&quot;headerlink&quot; title=&quot;Monster.com Jobs RSS feed cl
+    
+    </summary>
+    
+    
+      <category term="releases" scheme="https://jobapis.github.io/tags/releases/"/>
+    
+      <category term="clients" scheme="https://jobapis.github.io/tags/clients/"/>
+    
+      <category term="monster" scheme="https://jobapis.github.io/tags/monster/"/>
+    
+      <category term="muse" scheme="https://jobapis.github.io/tags/muse/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>JobsToMail Version 1.0 Release</title>
+    <link href="https://jobapis.github.io/2016/12/31/jobs-to-mail-10/"/>
+    <id>https://jobapis.github.io/2016/12/31/jobs-to-mail-10/</id>
+    <published>2016-12-31T08:43:20.000Z</published>
+    <updated>2017-08-09T20:51:08.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>Just in time for 2017, I got my act together and cleaned up things in <a href="https://github.com/jobapis/jobs-to-mail" target="_blank" rel="external">JobsToMail</a> for a version 1.0.0 release. There were a lot of major changes in the project since the last release, but I’ve had most of them in production for weeks now, so I’m not too concerned with their stability.</p>
+<h2 id="Release-Highlights"><a href="#Release-Highlights" class="headerlink" title="Release Highlights"></a>Release Highlights</h2><ul>
+<li>Support for 13 total job boards.</li>
+<li>User login via token, allowing users to view and manage job searches.</li>
+<li>Users can download their job listings every day in a convenient CSV file.</li>
+<li>Filtering recruiter job listings from our database of recruiting firms.</li>
+<li>Support for PHP 7.1.</li>
+</ul>
+<p><a href="https://github.com/jobapis/jobs-to-mail/releases/tag/1.0.0" target="_blank" rel="external">See all release notes on Github</a>.</p>
+<h2 id="What’s-next-for-JobsToMail"><a href="#What’s-next-for-JobsToMail" class="headerlink" title="What’s next for JobsToMail?"></a>What’s next for JobsToMail?</h2><p>I’m actually going to be doing less work on JobsToMail for the next few months. It’s been a really fun project, and I’m glad it’s been useful to a few job seekers and interested developers, but JobApis as an organization has other priorities for 2017.</p>
+<p>That said, I will continue to support the project and keep the servers running, and I encourage any developers who want to continue building it to keep the PRs coming.</p>
+<p>Special thanks to <a href="https://github.com/jobapis/jobs-to-mail/graphs/contributors" target="_blank" rel="external">Soleo, Alex Knoll, and Max Lever for their contributions to version 1.0</a>. It’s been really fun working on this project with you guys and I hope to continue work in 2017!</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;Just in time for 2017, I got my act together and cleaned up things in &lt;a href=&quot;https://github.com/jobapis/jobs-to-mail&quot; target=&quot;_blank&quot; r
+    
+    </summary>
+    
+    
+      <category term="releases" scheme="https://jobapis.github.io/tags/releases/"/>
+    
+      <category term="announcements" scheme="https://jobapis.github.io/tags/announcements/"/>
+    
+      <category term="jobs-to-mail" scheme="https://jobapis.github.io/tags/jobs-to-mail/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>JobsMulti - the Ultimate Job Board API Client - Version 1.0 Release</title>
+    <link href="https://jobapis.github.io/2016/12/01/jobs-multi-v1/"/>
+    <id>https://jobapis.github.io/2016/12/01/jobs-multi-v1/</id>
+    <published>2016-12-01T01:42:27.000Z</published>
+    <updated>2017-08-09T20:51:08.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>Today we are excited to announce the release of version 1.0, the first stable release, of <a href="https://github.com/jobapis/jobs-multi" target="_blank" rel="external">JobsMulti</a>.</p>
+<h2 id="What-is-JobsMulti"><a href="#What-is-JobsMulti" class="headerlink" title="What is JobsMulti?"></a>What is <a href="https://github.com/jobapis/jobs-multi" target="_blank" rel="external">JobsMulti</a>?</h2><p>JobsMulti is the ultimate job board API client. With a few lines of code, you can grab the latest jobs from up to 13 job boards (as of this writing), with our list of supported job boards growing every month. So, instead of writing code to query each job board individually, developers can get results from multiple job boards with just one client.</p>
+<p>The code speaks for itself, so here’s an example of using JobsMulti v.1.0:</p>
+<figure class="highlight php"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// Include as many or as few providers as you want. Just be sure to include any required keys.</span></div><div class="line">$providers = [</div><div class="line">    <span class="string">'Careerbuilder'</span> =&gt; [</div><div class="line">        <span class="string">'DeveloperKey'</span> =&gt; <span class="string">'&lt;YOUR DEVELOPER KEY&gt;'</span>,</div><div class="line">    ],</div><div class="line">    <span class="string">'Careercast'</span> =&gt; [],</div><div class="line">    <span class="string">'Careerjet'</span> =&gt; [</div><div class="line">        <span class="string">'affid'</span> =&gt; <span class="string">'&lt;YOUR AFFILIATE ID&gt;'</span>,</div><div class="line">    ],</div><div class="line">    <span class="string">'Dice'</span> =&gt; [],</div><div class="line">    <span class="string">'Github'</span> =&gt; [],</div><div class="line">    <span class="string">'Govt'</span> =&gt; [],</div><div class="line">    <span class="string">'Ieee'</span> =&gt; [],</div><div class="line">    <span class="string">'Indeed'</span> =&gt; [</div><div class="line">        <span class="string">'publisher'</span> =&gt; <span class="string">'&lt;YOUR PUBLISHER ID&gt;'</span>,</div><div class="line">    ],</div><div class="line">    <span class="string">'Jobinventory'</span> =&gt; [],</div><div class="line">    <span class="string">'Juju'</span> =&gt; [</div><div class="line">        <span class="string">'partnerid'</span> =&gt; <span class="string">'&lt;YOUR PARTNER ID&gt;'</span>,</div><div class="line">    ],</div><div class="line">    <span class="string">'Stackoverflow'</span> =&gt; [],</div><div class="line">    <span class="string">'Usajobs'</span> =&gt; [</div><div class="line">        <span class="string">'AuthorizationKey'</span> =&gt; <span class="string">'&lt;YOUR API KEY&gt;'</span>,</div><div class="line">    ],</div><div class="line">    <span class="string">'Ziprecruiter'</span> =&gt; [</div><div class="line">        <span class="string">'api_key'</span> =&gt; <span class="string">'&lt;YOUR API KEY&gt;'</span>,</div><div class="line">    ],</div><div class="line">];</div><div class="line"></div><div class="line"><span class="comment">// Instantiate a new JobsMulti client</span></div><div class="line">$client = <span class="keyword">new</span> JobsMulti($providers);</div><div class="line"></div><div class="line"><span class="comment">// Set the parameters: Keyword, Location, Page</span></div><div class="line">$client-&gt;setKeyword(<span class="string">'engineering'</span>)</div><div class="line">    -&gt;setLocation(<span class="string">'chicago, il'</span>)</div><div class="line">    -&gt;setPage(<span class="number">1</span>, <span class="number">10</span>);</div><div class="line"></div><div class="line"><span class="comment">// And include an array of options if you'd like</span></div><div class="line">$options = [</div><div class="line">    <span class="string">'maxAge'</span> =&gt; <span class="number">30</span>,              <span class="comment">// Maximum age (in days) of listings</span></div><div class="line">    <span class="string">'maxResults'</span> =&gt; <span class="number">100</span>,         <span class="comment">// Maximum number of results</span></div><div class="line">    <span class="string">'orderBy'</span> =&gt; <span class="string">'datePosted'</span>,   <span class="comment">// Field to order results by</span></div><div class="line">    <span class="string">'order'</span> =&gt; <span class="string">'desc'</span>,           <span class="comment">// Order ('asc' or 'desc')</span></div><div class="line">];</div><div class="line"></div><div class="line"><span class="comment">// Finally, get all the jobs in a single Collection</span></div><div class="line">$jobs = $client-&gt;getAllJobs($options);</div></pre></td></tr></table></figure>
+<p>More details can be found on the <a href="/open-source/jobs-multi">JobsMulti landing page</a> and in the <a href="https://github.com/jobapis/jobs-multi/blob/master/README.md" target="_blank" rel="external">Readme</a>. This project is free and open source, so if it helps you out, let us hear about it on Twitter: <a href="https://twitter.com/jobapis" target="_blank" rel="external">@jobapis</a>.</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;Today we are excited to announce the release of version 1.0, the first stable release, of &lt;a href=&quot;https://github.com/jobapis/jobs-multi&quot;
+    
+    </summary>
+    
+    
+      <category term="releases" scheme="https://jobapis.github.io/tags/releases/"/>
+    
+      <category term="clients" scheme="https://jobapis.github.io/tags/clients/"/>
+    
+      <category term="jobs multi" scheme="https://jobapis.github.io/tags/jobs-multi/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Stack Overflow Job Board Client</title>
+    <link href="https://jobapis.github.io/2016/11/29/stackoverflow/"/>
+    <id>https://jobapis.github.io/2016/11/29/stackoverflow/</id>
+    <published>2016-11-29T05:08:52.000Z</published>
+    <updated>2017-08-09T20:51:08.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>Stack Overflow is widely recognized for being one of the best Q&amp;A sites for developers. This package makes it easy to access <a href="https://stackoverflow.com/jobs" target="_blank" rel="external">their job listings</a> via the site’s RSS feed and the <a href="https://github.com/jobapis/jobs-common" target="_blank" rel="external">Jobs Common</a> project. Use of this package is similar to most other packages supported by Jobs Common:</p>
+<p>First, create a Query object:<br><figure class="highlight php"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">$query = <span class="keyword">new</span> JobApis\Jobs\Client\Queries\StackoverflowQuery([</div><div class="line">    <span class="string">'q'</span> =&gt; <span class="string">'engineering'</span>,</div><div class="line">    <span class="string">'l'</span> =&gt; <span class="string">'Chicago, IL'</span>,</div><div class="line">    <span class="string">'pg'</span> =&gt; <span class="string">'2'</span>,</div><div class="line">]);</div></pre></td></tr></table></figure></p>
+<p><em>For a full list of supported query options, <a href="https://github.com/jobapis/jobs-stackoverflow/blob/master/src/Queries/StackoverflowQuery.php" target="_blank" rel="external">see this file</a>.</em></p>
+<p>And inject it into the <code>StackoverflowProvider</code>:</p>
+<figure class="highlight php"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">$client = <span class="keyword">new</span> JobApis\Jobs\Client\Provider\StackoverflowProvider($query);</div><div class="line">$jobs = $client-&gt;getJobs();</div></pre></td></tr></table></figure>
+<p>This will return a <a href="https://github.com/jobapis/jobs-common/blob/master/src/Collection.php" target="_blank" rel="external">Collection</a> of <a href="https://github.com/jobapis/jobs-common/blob/master/src/Job.php" target="_blank" rel="external">Job</a> objects.</p>
+<p>For more detailed usage and documentation, see <a href="https://github.com/jobapis/jobs-stackoverflow#usage" target="_blank" rel="external">this project’s readme</a>, and as always, feel free to contact us if you have any questions or comments.</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;Stack Overflow is widely recognized for being one of the best Q&amp;amp;A sites for developers. This package makes it easy to access &lt;a href=
+    
+    </summary>
+    
+    
+      <category term="releases" scheme="https://jobapis.github.io/tags/releases/"/>
+    
+      <category term="clients" scheme="https://jobapis.github.io/tags/clients/"/>
+    
+      <category term="rss" scheme="https://jobapis.github.io/tags/rss/"/>
+    
+      <category term="stack overflow" scheme="https://jobapis.github.io/tags/stack-overflow/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>IEEE JobSite Client Released</title>
+    <link href="https://jobapis.github.io/2016/11/15/ieee-job-board-client/"/>
+    <id>https://jobapis.github.io/2016/11/15/ieee-job-board-client/</id>
+    <published>2016-11-15T08:34:20.000Z</published>
+    <updated>2017-08-09T20:51:08.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>The <a href="https://www.ieee.org/index.html" target="_blank" rel="external">IEEE</a> is a professional engineering organization with the largest membership of any technical organization in the world. Their <a href="http://careers.ieee.org/" target="_blank" rel="external">job board</a> is mostly geared towards engineers, especially computer and electrical engineers, but a variety of career paths may be represented. Unfortunately, their API is not documented, but can be accessed by appending <code>&amp;format=json</code> to most search queries on the site.</p>
+<p>Based on this knowledge and some testing I was able to create a <a href="https://github.com/jobapis/jobs-ieee" target="_blank" rel="external">job board API client for IEEE’s JobSite</a> and it is now the 18th job board API client supported by our organization.</p>
+<p>To start using the IEEE job board API client, install the package via composer:</p>
+<p>Next, create a Query object:<br><figure class="highlight php"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">$query = <span class="keyword">new</span> JobApis\Jobs\Client\Queries\IeeeQuery([</div><div class="line">    <span class="string">'keyword'</span> =&gt; <span class="string">'engineering'</span>,</div><div class="line">    <span class="string">'location'</span> =&gt; <span class="string">'Chicago, IL'</span>,</div><div class="line">    <span class="string">'rows'</span> =&gt; <span class="string">'50'</span>,</div><div class="line">]);</div></pre></td></tr></table></figure></p>
+<p><em>For a full list of supported query options, <a href="https://github.com/jobapis/jobs-ieee/blob/master/src/Queries/IeeeQuery.php" target="_blank" rel="external">see this file</a>.</em></p>
+<p>And inject it into the <code>IeeeProvider</code>:</p>
+<figure class="highlight php"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">$client = <span class="keyword">new</span> JobApis\Jobs\Client\Provider\IeeeProvider($query);</div><div class="line">$jobs = $client-&gt;getJobs();</div></pre></td></tr></table></figure>
+<p>This will return a <a href="https://github.com/jobapis/jobs-common/blob/master/src/Collection.php" target="_blank" rel="external">Collection</a> of <a href="https://github.com/jobapis/jobs-common/blob/master/src/Job.php" target="_blank" rel="external">Job</a> objects.</p>
+<p>For more detailed usage and documentation, see <a href="https://github.com/jobapis/jobs-ieee#usage" target="_blank" rel="external">this project’s readme</a>, and as always, feel free to contact us if you have any questions or comments.</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;The &lt;a href=&quot;https://www.ieee.org/index.html&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;IEEE&lt;/a&gt; is a professional engineering organization with the
+    
+    </summary>
+    
+    
+      <category term="releases" scheme="https://jobapis.github.io/tags/releases/"/>
+    
+      <category term="clients" scheme="https://jobapis.github.io/tags/clients/"/>
+    
+      <category term="ieee" scheme="https://jobapis.github.io/tags/ieee/"/>
+    
+  </entry>
+  
+</feed>
