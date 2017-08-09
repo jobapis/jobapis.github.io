@@ -4,9 +4,9 @@ subtitle: Access to job board and hiring data from across the web
 date: 2017-03-27 15:19:14
 ---
 
-Jobs Hub tracks thousands of job boards to keep an eye out for targeted job listings that meet your criteria. We can save you hundreds of hours of searching for and archiving job listings with private access to your own jobs data feed.
-
 ## What is Jobs Hub?
+
+Jobs Hub is the easiest way to get job board data from dozens of job boards in one simple REST API. Please [email us at admin@jobapis.com](mailto:admin@jobapis.com?subject=Requesting%20API%20Key) to request a free trial API Key or [browse the documentation](/hub/docs) to see what's possible.
 
 <div style="position: relative;
             	padding-bottom: 56.25%;
@@ -28,7 +28,7 @@ Jobs Hub tracks thousands of job boards to keep an eye out for targeted job list
     text-decoration: none;
     display: inline-block;
     font-family: 'Raleway', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-    font-size: 24px;" href="mailto:admin@jobapis.com?subject=Interested%20in%20Learning%20More%20About%20Jobs%20Hub">Click here to get started today!</a>
+    font-size: 24px;" href="#Checkout">Click here to get started today!</a>
 </button>
 </div>
 
@@ -44,32 +44,14 @@ See which employers are actively hiring and making moves in your area or across 
 ### Job Board Backfill
 Fill your new job board with fresh, high-quality job listings from thousands of job sites.
 
-## How does Jobs Hub work?
+## Enterprise
 
-### 1. Targeted job searches
-You give us the job search terms and locations you want to monitor.
+Our standard plans are great for most users, but we also set up custom implementations for enterprise customers. Please [email us](mailto:admin@jobapis.com?subject=Jobs%20Hub%20Enterprise) for a free consultation.
 
-### 2. Variable collection frequency
-We crawl the internet, looking for the latest jobs that meet your search criteria.
+-----
 
-### 3. Rich data feed, dashboard, and CSV
-All your job listings are indexed and stored for you. You can access them from:
+## Checkout
+
+Sign up below for a monthly plan, or [email us](mailto:admin@jobapis.com?subject=Requesting%20API%20Key) to request an API key with a free trial!
  
-- [Our JSON API (for the techies)](http://developers.jobapis.com/)
-- [Downloadable CSV Files](https://goo.gl/zR9B8R)
-- [A Personal Dashboard](https://goo.gl/BtwZf1)
-
-Please [email us at admin@jobapis.com](mailto:admin@jobapis.com?subject=Interested%20in%20Learning%20More%20About%20Jobs%20Hub) for details on pricing or to ask any questions.
-
-<div style="text-align:center;">
-<a style="
-    background-color: #F58532;
-    border: none;
-    color: white;
-    padding: 15px 32px;
-    text-decoration: none;
-    display: inline-block;
-    font-family: 'Raleway', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-    font-size: 24px;" href="mailto:admin@jobapis.com?subject=Interested%20in%20Learning%20More%20About%20Jobs%20Hub">Click here to get started today!</a>
-</button>
-</div>
+<div id="mc2fu0g25k6tvl"><a href="https://app.moonclerk.com/pay/2fu0g25k6tvl">Jobs Hub API</a></div>
