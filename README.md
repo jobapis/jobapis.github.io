@@ -14,6 +14,6 @@ If you're using docker, you just need to run:
 - `npm install` to install the packages.
 - `docker run --rm -v $(pwd):/hexo -p 4000:4000 tommylau/hexo` to get the Hexo server running.
 
-To build for deployment: `docker run --rm -v $(pwd):/hexo -p 4000:4000 tommylau/hexo hexo build`.
+To build for deployment: `docker run --rm -v $(pwd):/hexo tommylau/hexo hexo build`.
 
 And to deploy: `node_modules/hexo/bin/hexo deploy`.

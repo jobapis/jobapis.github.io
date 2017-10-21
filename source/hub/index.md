@@ -8,17 +8,6 @@ date: 2017-03-27 15:19:14
 
 Jobs Hub is the easiest way to get job board data from dozens of job boards in one simple REST API. Please [email us at admin@jobapis.com](mailto:admin@jobapis.com?subject=Requesting%20API%20Key) to request a free trial API Key or [browse the documentation](/hub/docs) to see what's possible.
 
-<div style="position: relative;
-            	padding-bottom: 56.25%;
-            	padding-top: 25px;
-            	height: 0;">
-    <iframe style="position: absolute;
-                   	top: 0;
-                   	left: 0;
-                   	width: 100%;
-                   	height: 100%;" width="560" height="315" src="https://www.youtube.com/embed/-3eMVF5HfoA?rel=0&amp;showinfo=0" frameborder="0" allowfullscreen></iframe>
-</div>
-
 <div style="text-align:center;">
 <a style="
     background-color: #F58532;
