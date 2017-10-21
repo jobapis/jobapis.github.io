@@ -167,6 +167,32 @@
             <h3 style="color:#999">Latest News:</h3>
             
                 <div class="post-preview">
+    <a href="/2017/10/21/jobs-hub-pricing-update/">
+        <h2 class="post-title">
+            Pay Less for More Jobs
+        </h2>
+        
+    </a>
+    <p class="post-meta">
+        <!-- Date and Author -->
+        
+        2017-10-21
+    </p>
+    <!-- Post Main Content -->
+    <div>
+        <p>A few months ago, we launched a job board aggregation service called <a href="/hub/">Jobs Hub</a>. After trialing the product with a few customers in the Spring and Summer of 2017, we were able to gather feedback, and improve the product, which has now been re-released as a self-service API.</p>
+<h2 id="What-does-that-mean"><a href="#What-does-that-mean" class="headerlink" title="What does that mean?"></a>What does that mean?</h2><p>Instead of setting up a custom job board aggregator for each customer, we’ve generalized the product so that anyone can gain access to our database of tens of thousands of jobs that we collect every month. Our API is a developer-first interface that allows you to use our job board data for your site’s backfill, research project, or sales lead purposes.</p>
+<h2 id="New-pricing-for-Jobs-Hub"><a href="#New-pricing-for-Jobs-Hub" class="headerlink" title="New pricing for Jobs Hub"></a>New pricing for Jobs Hub</h2><p>Because Jobs Hub doesn’t require a custom implementation, we were able to dramatically decrease the pricing. You can <a href="/hub/">request access</a> for a free API key with up to 100 queries per month, or get a paid monthly plan starting at just $20/month. For that low price, you’re able to gain access to tens of thousands of listings from most of the internet’s major job boards and aggregators!</p>
+<p>To learn more, check out <a href="/hub/">Jobs Hub</a> or email me at <a href="mailto:admin@jobapis.com" target="_blank" rel="external">admin@jobapis.com</a> to request a free trial API key.</p>
+
+
+        
+    </div>
+</div>
+<hr>
+
+            
+                <div class="post-preview">
     <a href="/2017/03/27/jobs-hub-release/">
         <h2 class="post-title">
             Jobs Hub
@@ -441,37 +467,6 @@
 <figure class="highlight php"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">$client = <span class="keyword">new</span> JobApis\Jobs\Client\Provider\StackoverflowProvider($query);</div><div class="line">$jobs = $client-&gt;getJobs();</div></pre></td></tr></table></figure>
 <p>This will return a <a href="https://github.com/jobapis/jobs-common/blob/master/src/Collection.php" target="_blank" rel="external">Collection</a> of <a href="https://github.com/jobapis/jobs-common/blob/master/src/Job.php" target="_blank" rel="external">Job</a> objects.</p>
 <p>For more detailed usage and documentation, see <a href="https://github.com/jobapis/jobs-stackoverflow#usage" target="_blank" rel="external">this project’s readme</a>, and as always, feel free to contact us if you have any questions or comments.</p>
-
-
-        
-    </div>
-</div>
-<hr>
-
-            
-                <div class="post-preview">
-    <a href="/2016/11/15/ieee-job-board-client/">
-        <h2 class="post-title">
-            IEEE JobSite Client Released
-        </h2>
-        
-    </a>
-    <p class="post-meta">
-        <!-- Date and Author -->
-        
-        2016-11-15
-    </p>
-    <!-- Post Main Content -->
-    <div>
-        <p>The <a href="https://www.ieee.org/index.html" target="_blank" rel="external">IEEE</a> is a professional engineering organization with the largest membership of any technical organization in the world. Their <a href="http://careers.ieee.org/" target="_blank" rel="external">job board</a> is mostly geared towards engineers, especially computer and electrical engineers, but a variety of career paths may be represented. Unfortunately, their API is not documented, but can be accessed by appending <code>&amp;format=json</code> to most search queries on the site.</p>
-<p>Based on this knowledge and some testing I was able to create a <a href="https://github.com/jobapis/jobs-ieee" target="_blank" rel="external">job board API client for IEEE’s JobSite</a> and it is now the 18th job board API client supported by our organization.</p>
-<p>To start using the IEEE job board API client, install the package via composer:</p>
-<p>Next, create a Query object:<br><figure class="highlight php"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">$query = <span class="keyword">new</span> JobApis\Jobs\Client\Queries\IeeeQuery([</div><div class="line">    <span class="string">'keyword'</span> =&gt; <span class="string">'engineering'</span>,</div><div class="line">    <span class="string">'location'</span> =&gt; <span class="string">'Chicago, IL'</span>,</div><div class="line">    <span class="string">'rows'</span> =&gt; <span class="string">'50'</span>,</div><div class="line">]);</div></pre></td></tr></table></figure></p>
-<p><em>For a full list of supported query options, <a href="https://github.com/jobapis/jobs-ieee/blob/master/src/Queries/IeeeQuery.php" target="_blank" rel="external">see this file</a>.</em></p>
-<p>And inject it into the <code>IeeeProvider</code>:</p>
-<figure class="highlight php"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">$client = <span class="keyword">new</span> JobApis\Jobs\Client\Provider\IeeeProvider($query);</div><div class="line">$jobs = $client-&gt;getJobs();</div></pre></td></tr></table></figure>
-<p>This will return a <a href="https://github.com/jobapis/jobs-common/blob/master/src/Collection.php" target="_blank" rel="external">Collection</a> of <a href="https://github.com/jobapis/jobs-common/blob/master/src/Job.php" target="_blank" rel="external">Job</a> objects.</p>
-<p>For more detailed usage and documentation, see <a href="https://github.com/jobapis/jobs-ieee#usage" target="_blank" rel="external">this project’s readme</a>, and as always, feel free to contact us if you have any questions or comments.</p>
 
 
         

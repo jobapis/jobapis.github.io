@@ -167,6 +167,37 @@
             <h3 style="color:#999">Latest News:</h3>
             
                 <div class="post-preview">
+    <a href="/2016/11/15/ieee-job-board-client/">
+        <h2 class="post-title">
+            IEEE JobSite Client Released
+        </h2>
+        
+    </a>
+    <p class="post-meta">
+        <!-- Date and Author -->
+        
+        2016-11-15
+    </p>
+    <!-- Post Main Content -->
+    <div>
+        <p>The <a href="https://www.ieee.org/index.html" target="_blank" rel="external">IEEE</a> is a professional engineering organization with the largest membership of any technical organization in the world. Their <a href="http://careers.ieee.org/" target="_blank" rel="external">job board</a> is mostly geared towards engineers, especially computer and electrical engineers, but a variety of career paths may be represented. Unfortunately, their API is not documented, but can be accessed by appending <code>&amp;format=json</code> to most search queries on the site.</p>
+<p>Based on this knowledge and some testing I was able to create a <a href="https://github.com/jobapis/jobs-ieee" target="_blank" rel="external">job board API client for IEEE’s JobSite</a> and it is now the 18th job board API client supported by our organization.</p>
+<p>To start using the IEEE job board API client, install the package via composer:</p>
+<p>Next, create a Query object:<br><figure class="highlight php"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">$query = <span class="keyword">new</span> JobApis\Jobs\Client\Queries\IeeeQuery([</div><div class="line">    <span class="string">'keyword'</span> =&gt; <span class="string">'engineering'</span>,</div><div class="line">    <span class="string">'location'</span> =&gt; <span class="string">'Chicago, IL'</span>,</div><div class="line">    <span class="string">'rows'</span> =&gt; <span class="string">'50'</span>,</div><div class="line">]);</div></pre></td></tr></table></figure></p>
+<p><em>For a full list of supported query options, <a href="https://github.com/jobapis/jobs-ieee/blob/master/src/Queries/IeeeQuery.php" target="_blank" rel="external">see this file</a>.</em></p>
+<p>And inject it into the <code>IeeeProvider</code>:</p>
+<figure class="highlight php"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">$client = <span class="keyword">new</span> JobApis\Jobs\Client\Provider\IeeeProvider($query);</div><div class="line">$jobs = $client-&gt;getJobs();</div></pre></td></tr></table></figure>
+<p>This will return a <a href="https://github.com/jobapis/jobs-common/blob/master/src/Collection.php" target="_blank" rel="external">Collection</a> of <a href="https://github.com/jobapis/jobs-common/blob/master/src/Job.php" target="_blank" rel="external">Job</a> objects.</p>
+<p>For more detailed usage and documentation, see <a href="https://github.com/jobapis/jobs-ieee#usage" target="_blank" rel="external">this project’s readme</a>, and as always, feel free to contact us if you have any questions or comments.</p>
+
+
+        
+    </div>
+</div>
+<hr>
+
+            
+                <div class="post-preview">
     <a href="/2016/11/09/careerjet-client/">
         <h2 class="post-title">
             Careerjet Jobs Provider Released
@@ -439,34 +470,6 @@
 <h3 id="3-Inject-the-query-object-and-get-jobs"><a href="#3-Inject-the-query-object-and-get-jobs" class="headerlink" title="3. Inject the query object and get jobs"></a>3. Inject the query object and get jobs</h3><figure class="highlight php"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">$client = <span class="keyword">new</span> JobApis\Jobs\Client\Provider\UsajobsProvider($query);</div><div class="line">$jobs = $client-&gt;getJobs();</div></pre></td></tr></table></figure>
 <p>This will return a <a href="https://github.com/jobapis/jobs-common/blob/master/src/Collection.php" target="_blank" rel="external">Collection</a> of <a href="https://github.com/jobapis/jobs-common/blob/master/src/Job.php" target="_blank" rel="external">Job</a> objects.</p>
 <p>For more detailed usage and documentation, see <a href="https://github.com/jobapis/jobs-usajobs#usage" target="_blank" rel="external">this project’s readme</a></p>
-
-
-        
-    </div>
-</div>
-<hr>
-
-            
-                <div class="post-preview">
-    <a href="/2016/09/11/querying-multiple-job-boards/">
-        <h2 class="post-title">
-            Querying multiple job board APIs at once
-        </h2>
-        
-    </a>
-    <p class="post-meta">
-        <!-- Date and Author -->
-        
-        2016-09-11
-    </p>
-    <!-- Post Main Content -->
-    <div>
-        <p>Today marks the first pre-release of <a href="https://github.com/jobapis/jobs-multi" target="_blank" rel="external">Jobs-Multi</a>, a package intented to help you access multiple job board APIs in PHP with less work.</p>
-<p>Where <a href="https://github.com/jobapis/jobs-common" target="_blank" rel="external">Jobs-Common</a> standardizes the <em>output</em> of each job board, Jobs-Multi helps standardize the <em>input</em>, giving users access to three setters that enable you to build multiple Queries and then retrieve all the results at the same time.</p>
-<p>What does this mean in practice? With Jobs-Multi you can do things like:</p>
-<figure class="highlight php"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">$client = <span class="keyword">new</span> JobsMulti([</div><div class="line">    <span class="string">'Dice'</span> =&gt; [],</div><div class="line">    <span class="string">'Govt'</span> =&gt; [],</div><div class="line">    <span class="string">'Github'</span> =&gt; [],</div><div class="line">]);</div><div class="line">$jobs = $client-&gt;setKeyword(<span class="string">'training'</span>)</div><div class="line">   -&gt;setLocation(<span class="string">'chicago, il'</span>)</div><div class="line">   -&gt;setPage(<span class="number">1</span>, <span class="number">10</span>)</div><div class="line">   -&gt;getAllJobs();</div></pre></td></tr></table></figure>
-<p>That final <code>$jobs</code> variable contains an array of all jobs matching the provided criteria from <a href="https://github.com/jobapis/jobs-dice" target="_blank" rel="external">Dice</a>, <a href="https://github.com/jobapis/jobs-govt" target="_blank" rel="external">Government Jobs</a>, and <a href="https://github.com/jobapis/jobs-github" target="_blank" rel="external">Github</a> in one go.</p>
-<p>You can access more providers and you also have the option to query each one individually. See the <a href="https://github.com/jobapis/jobs-multi" target="_blank" rel="external">jobs-multi repo on Github for more details</a>.</p>
 
 
         
