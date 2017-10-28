@@ -24,7 +24,6 @@ $providers = [
     'Careerjet' => [
         'affid' => '<YOUR AFFILIATE ID>',
     ],
-    'Dice' => [],
     'Github' => [],
     'Govt' => [],
     'Ieee' => [],

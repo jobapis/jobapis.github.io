@@ -29,7 +29,7 @@ We offer PHP API clients for many job boards:
 - [Careerjet](/open-source/careerjet)
 - [CareersInGovernment](/open-source/careersingov)
 - [Craigslist](/open-source/craigslist)
-- [Dice](/open-source/dice)
+- ~~[Dice](/open-source/dice)~~ - Shut down by Dice in October, 2017
 - [Elance](/open-source/elance)
 - [Github Jobs](/open-source/github)
 - [GoRemote](/open-source/goremote)
@@ -42,7 +42,7 @@ We offer PHP API clients for many job boards:
 - [Monster.com](/open-source/monster)
 - [Muse](/open-source/muse)
 - [PHPJobs.com](/open-source/phpjobs)
-- [SimplyHired](/open-source/simplyhired)
+- ~~[SimplyHired](/open-source/simplyhired)~~ - Shut down by SimplyHired in June, 2016
 - [Stack Overflow](/open-source/stackoverflow)
 - [USAJobs](/open-source/usajobs)
 - [ZipRecruiter](/open-source/ziprecruiter)

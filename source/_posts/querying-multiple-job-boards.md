@@ -14,7 +14,6 @@ What does this mean in practice? With Jobs-Multi you can do things like:
 
 ```php
 $client = new JobsMulti([
-    'Dice' => [],
     'Govt' => [],
     'Github' => [],
 ]);
@@ -24,6 +23,6 @@ $jobs = $client->setKeyword('training')
    ->getAllJobs();
 ```
 
-That final `$jobs` variable contains an array of all jobs matching the provided criteria from [Dice](https://github.com/jobapis/jobs-dice), [Government Jobs](https://github.com/jobapis/jobs-govt), and [Github](https://github.com/jobapis/jobs-github) in one go.
+That final `$jobs` variable contains an array of all jobs matching the provided criteria from [Government Jobs](https://github.com/jobapis/jobs-govt) and [Github](https://github.com/jobapis/jobs-github) in one go.
 
 You can access more providers and you also have the option to query each one individually. See the [jobs-multi repo on Github for more details](https://github.com/jobapis/jobs-multi).

@@ -15,11 +15,10 @@ Use composer: `composer require jobapis/jobs-multi`
 
 ### Usage
 
-To get the latest "engineering jobs" in Chicago from Dice, Github, IEEE Job Board, and StackOverflow, here's what you would do:
+To get the latest "engineering jobs" in Chicago from Github, IEEE Job Board, and StackOverflow, here's what you would do:
 
 ```php
 $providers = [
-    'Dice' => [],
     'Github' => [],
     'Ieee' => [],
     'Stackoverflow' => [],
