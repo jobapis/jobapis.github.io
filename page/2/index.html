@@ -167,6 +167,35 @@
             <h3 style="color:#999">Latest News:</h3>
             
                 <div class="post-preview">
+    <a href="/2016/11/29/stackoverflow/">
+        <h2 class="post-title">
+            Stack Overflow Job Board Client
+        </h2>
+        
+    </a>
+    <p class="post-meta">
+        <!-- Date and Author -->
+        
+        2016-11-29
+    </p>
+    <!-- Post Main Content -->
+    <div>
+        <p>Stack Overflow is widely recognized for being one of the best Q&amp;A sites for developers. This package makes it easy to access <a href="https://stackoverflow.com/jobs" target="_blank" rel="external">their job listings</a> via the site’s RSS feed and the <a href="https://github.com/jobapis/jobs-common" target="_blank" rel="external">Jobs Common</a> project. Use of this package is similar to most other packages supported by Jobs Common:</p>
+<p>First, create a Query object:<br><figure class="highlight php"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">$query = <span class="keyword">new</span> JobApis\Jobs\Client\Queries\StackoverflowQuery([</div><div class="line">    <span class="string">'q'</span> =&gt; <span class="string">'engineering'</span>,</div><div class="line">    <span class="string">'l'</span> =&gt; <span class="string">'Chicago, IL'</span>,</div><div class="line">    <span class="string">'pg'</span> =&gt; <span class="string">'2'</span>,</div><div class="line">]);</div></pre></td></tr></table></figure></p>
+<p><em>For a full list of supported query options, <a href="https://github.com/jobapis/jobs-stackoverflow/blob/master/src/Queries/StackoverflowQuery.php" target="_blank" rel="external">see this file</a>.</em></p>
+<p>And inject it into the <code>StackoverflowProvider</code>:</p>
+<figure class="highlight php"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">$client = <span class="keyword">new</span> JobApis\Jobs\Client\Provider\StackoverflowProvider($query);</div><div class="line">$jobs = $client-&gt;getJobs();</div></pre></td></tr></table></figure>
+<p>This will return a <a href="https://github.com/jobapis/jobs-common/blob/master/src/Collection.php" target="_blank" rel="external">Collection</a> of <a href="https://github.com/jobapis/jobs-common/blob/master/src/Job.php" target="_blank" rel="external">Job</a> objects.</p>
+<p>For more detailed usage and documentation, see <a href="https://github.com/jobapis/jobs-stackoverflow#usage" target="_blank" rel="external">this project’s readme</a>, and as always, feel free to contact us if you have any questions or comments.</p>
+
+
+        
+    </div>
+</div>
+<hr>
+
+            
+                <div class="post-preview">
     <a href="/2016/11/15/ieee-job-board-client/">
         <h2 class="post-title">
             IEEE JobSite Client Released
@@ -440,36 +469,6 @@
 <h3 id="3-Inject-the-query-object-and-get-jobs"><a href="#3-Inject-the-query-object-and-get-jobs" class="headerlink" title="3. Inject the query object and get jobs"></a>3. Inject the query object and get jobs</h3><figure class="highlight php"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">$client = <span class="keyword">new</span> JobApis\Jobs\Client\Provider\CareercastProvider($query);</div><div class="line">$jobs = $client-&gt;getJobs();</div></pre></td></tr></table></figure>
 <p>This will return a <a href="https://github.com/jobapis/jobs-common/blob/master/src/Collection.php" target="_blank" rel="external">Collection</a> of <a href="https://github.com/jobapis/jobs-common/blob/master/src/Job.php" target="_blank" rel="external">Job</a> objects.</p>
 <p>For more detailed usage and documentation, see <a href="https://github.com/jobapis/jobs-careercast#usage" target="_blank" rel="external">this project’s readme</a></p>
-
-
-        
-    </div>
-</div>
-<hr>
-
-            
-                <div class="post-preview">
-    <a href="/2016/09/17/usajobs-api/">
-        <h2 class="post-title">
-            USAJobs API Client now available
-        </h2>
-        
-    </a>
-    <p class="post-meta">
-        <!-- Date and Author -->
-        
-        2016-09-17
-    </p>
-    <!-- Post Main Content -->
-    <div>
-        <p>I’ve added a new PHP client for <a href="https://github.com/jobapis/jobs-usajobs" target="_blank" rel="external">USAJobs</a>, and released it to work with v2 of the Jobs-Common project.</p>
-<p><a href="https://www.usajobs.gov/" target="_blank" rel="external">USAJobs</a> is one of the sources for the Government Jobs API, but their API has jobs that aren’t necessarily collected by the <a href="http://search.digitalgov.gov/developer/jobs.html" target="_blank" rel="external">DigitalGov service</a>, so if you’re really interested in using government jobs in your application, this could be a great addition.</p>
-<p>The basic usage is the same as most of our other providers:</p>
-<h3 id="1-Install-the-package-via-Composer"><a href="#1-Install-the-package-via-Composer" class="headerlink" title="1. Install the package via Composer"></a>1. Install the package via Composer</h3><p><code>composer require jobapis/jobs-usajobs</code></p>
-<h3 id="2-Create-a-query-object-with-all-API-parameters"><a href="#2-Create-a-query-object-with-all-API-parameters" class="headerlink" title="2. Create a query object with all API parameters"></a>2. Create a query object with all API parameters</h3><figure class="highlight php"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">$query = <span class="keyword">new</span> JobApis\Jobs\Client\Queries\UsajobsQuery([</div><div class="line">    <span class="string">'Keyword'</span> =&gt; <span class="string">'engineering'</span>,</div><div class="line">    <span class="string">'LocationName'</span> =&gt; <span class="string">'Chicago, IL'</span>,</div><div class="line">    <span class="string">'AuthorizationKey'</span> =&gt; YOUR_API_KEY,</div><div class="line">]);</div></pre></td></tr></table></figure>
-<h3 id="3-Inject-the-query-object-and-get-jobs"><a href="#3-Inject-the-query-object-and-get-jobs" class="headerlink" title="3. Inject the query object and get jobs"></a>3. Inject the query object and get jobs</h3><figure class="highlight php"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">$client = <span class="keyword">new</span> JobApis\Jobs\Client\Provider\UsajobsProvider($query);</div><div class="line">$jobs = $client-&gt;getJobs();</div></pre></td></tr></table></figure>
-<p>This will return a <a href="https://github.com/jobapis/jobs-common/blob/master/src/Collection.php" target="_blank" rel="external">Collection</a> of <a href="https://github.com/jobapis/jobs-common/blob/master/src/Job.php" target="_blank" rel="external">Job</a> objects.</p>
-<p>For more detailed usage and documentation, see <a href="https://github.com/jobapis/jobs-usajobs#usage" target="_blank" rel="external">this project’s readme</a></p>
 
 
         

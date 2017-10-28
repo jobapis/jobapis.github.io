@@ -173,25 +173,8 @@
 
             <!-- Post Main Content -->
             <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-                <h2 id="Project-Overview"><a href="#Project-Overview" class="headerlink" title="Project Overview"></a>Project Overview</h2><p>Use the Dice Jobs Provider to connect your PHP application with the Dice job board API.</p>
-<ul>
-<li><a href="https://github.com/jobapis/jobs-dice" target="_blank" rel="external">Github</a></li>
-<li><a href="https://packagist.org/packages/jobapis/jobs-dice" target="_blank" rel="external">Packagist</a></li>
-<li><a href="http://www.dice.com/common/content/util/apidoc/jobsearch.html" target="_blank" rel="external">API Docs</a></li>
-</ul>
-<h3 id="Installation"><a href="#Installation" class="headerlink" title="Installation"></a>Installation</h3><p>Use composer: <code>composer require jobapis/jobs-dice</code></p>
-<h3 id="Usage"><a href="#Usage" class="headerlink" title="Usage"></a>Usage</h3><p>Create a Query object and add all the parameters you’d like via the constructor.</p>
-<figure class="highlight php"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// Add parameters to the query via the constructor</span></div><div class="line">$query = <span class="keyword">new</span> JobApis\Jobs\Client\Queries\DiceQuery([</div><div class="line">    <span class="string">'text'</span> =&gt; <span class="string">'engineering'</span></div><div class="line">]);</div></pre></td></tr></table></figure>
-<p>Or via the “set” method. All of the parameters documented in the API’s documentation can be added.</p>
-<figure class="highlight php"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// Add parameters via the set() method</span></div><div class="line">$query-&gt;set(<span class="string">'skill'</span>, <span class="string">'soldering'</span>);</div></pre></td></tr></table></figure>
-<p>You can even chain them if you’d like.</p>
-<figure class="highlight php"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// Add parameters via the set() method</span></div><div class="line">$query-&gt;set(<span class="string">'state'</span>, <span class="string">'Illinois'</span>)</div><div class="line">    -&gt;set(<span class="string">'city'</span>, <span class="string">'Chicago'</span>)</div><div class="line">    -&gt;set(<span class="string">'country'</span>, <span class="string">'United States'</span>);</div></pre></td></tr></table></figure>
-<p>Then inject the query object into the provider.</p>
-<figure class="highlight php"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// Instantiating provider with a query object</span></div><div class="line">$client = <span class="keyword">new</span> JobApis\Jobs\Client\Provider\DiceProvider($query);</div></pre></td></tr></table></figure>
-<p>And call the “getJobs” method to retrieve results.</p>
-<figure class="highlight php"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// Get a Collection of Jobs</span></div><div class="line">$jobs = $client-&gt;getJobs();</div></pre></td></tr></table></figure>
-<p>This will return a <a href="https://github.com/jobapis/jobs-common/blob/master/src/Collection.php" target="_blank" rel="external">Collection</a> of <a href="https://github.com/jobapis/jobs-common/blob/master/src/Job.php" target="_blank" rel="external">Job</a> objects.</p>
-<p>For more detailed usage and documentation, see <a href="https://github.com/jobapis/jobs-dice#usage" target="_blank" rel="external">this project’s readme</a></p>
+                <h2 id="Project-Overview"><a href="#Project-Overview" class="headerlink" title="Project Overview"></a>Project Overview</h2><p>DEPRECATION NOTICE: As of <a href="https://github.com/jobapis/jobs-dice/issues/8" target="_blank" rel="external">October, 2017 the Dice Jobs API has been shut down</a>. Dice has given me no reason for this, but there’s nothing I can do about it. This library no longer works. To contact Dice, <a href="http://techhub.dice.com/Dice_General-ContactUs_D.html" target="_blank" rel="external">please fill out this form on their website</a>.</p>
+<p>The code lives on though, so <a href="https://github.com/jobapis/jobs-dice" target="_blank" rel="external">check it out on Github if you find it useful</a>.</p>
 
 
                 

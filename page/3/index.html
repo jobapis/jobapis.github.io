@@ -167,6 +167,36 @@
             <h3 style="color:#999">Latest News:</h3>
             
                 <div class="post-preview">
+    <a href="/2016/09/17/usajobs-api/">
+        <h2 class="post-title">
+            USAJobs API Client now available
+        </h2>
+        
+    </a>
+    <p class="post-meta">
+        <!-- Date and Author -->
+        
+        2016-09-17
+    </p>
+    <!-- Post Main Content -->
+    <div>
+        <p>I’ve added a new PHP client for <a href="https://github.com/jobapis/jobs-usajobs" target="_blank" rel="external">USAJobs</a>, and released it to work with v2 of the Jobs-Common project.</p>
+<p><a href="https://www.usajobs.gov/" target="_blank" rel="external">USAJobs</a> is one of the sources for the Government Jobs API, but their API has jobs that aren’t necessarily collected by the <a href="http://search.digitalgov.gov/developer/jobs.html" target="_blank" rel="external">DigitalGov service</a>, so if you’re really interested in using government jobs in your application, this could be a great addition.</p>
+<p>The basic usage is the same as most of our other providers:</p>
+<h3 id="1-Install-the-package-via-Composer"><a href="#1-Install-the-package-via-Composer" class="headerlink" title="1. Install the package via Composer"></a>1. Install the package via Composer</h3><p><code>composer require jobapis/jobs-usajobs</code></p>
+<h3 id="2-Create-a-query-object-with-all-API-parameters"><a href="#2-Create-a-query-object-with-all-API-parameters" class="headerlink" title="2. Create a query object with all API parameters"></a>2. Create a query object with all API parameters</h3><figure class="highlight php"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">$query = <span class="keyword">new</span> JobApis\Jobs\Client\Queries\UsajobsQuery([</div><div class="line">    <span class="string">'Keyword'</span> =&gt; <span class="string">'engineering'</span>,</div><div class="line">    <span class="string">'LocationName'</span> =&gt; <span class="string">'Chicago, IL'</span>,</div><div class="line">    <span class="string">'AuthorizationKey'</span> =&gt; YOUR_API_KEY,</div><div class="line">]);</div></pre></td></tr></table></figure>
+<h3 id="3-Inject-the-query-object-and-get-jobs"><a href="#3-Inject-the-query-object-and-get-jobs" class="headerlink" title="3. Inject the query object and get jobs"></a>3. Inject the query object and get jobs</h3><figure class="highlight php"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">$client = <span class="keyword">new</span> JobApis\Jobs\Client\Provider\UsajobsProvider($query);</div><div class="line">$jobs = $client-&gt;getJobs();</div></pre></td></tr></table></figure>
+<p>This will return a <a href="https://github.com/jobapis/jobs-common/blob/master/src/Collection.php" target="_blank" rel="external">Collection</a> of <a href="https://github.com/jobapis/jobs-common/blob/master/src/Job.php" target="_blank" rel="external">Job</a> objects.</p>
+<p>For more detailed usage and documentation, see <a href="https://github.com/jobapis/jobs-usajobs#usage" target="_blank" rel="external">this project’s readme</a></p>
+
+
+        
+    </div>
+</div>
+<hr>
+
+            
+                <div class="post-preview">
     <a href="/2016/09/11/querying-multiple-job-boards/">
         <h2 class="post-title">
             Querying multiple job board APIs at once
@@ -183,8 +213,8 @@
         <p>Today marks the first pre-release of <a href="https://github.com/jobapis/jobs-multi" target="_blank" rel="external">Jobs-Multi</a>, a package intented to help you access multiple job board APIs in PHP with less work.</p>
 <p>Where <a href="https://github.com/jobapis/jobs-common" target="_blank" rel="external">Jobs-Common</a> standardizes the <em>output</em> of each job board, Jobs-Multi helps standardize the <em>input</em>, giving users access to three setters that enable you to build multiple Queries and then retrieve all the results at the same time.</p>
 <p>What does this mean in practice? With Jobs-Multi you can do things like:</p>
-<figure class="highlight php"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">$client = <span class="keyword">new</span> JobsMulti([</div><div class="line">    <span class="string">'Dice'</span> =&gt; [],</div><div class="line">    <span class="string">'Govt'</span> =&gt; [],</div><div class="line">    <span class="string">'Github'</span> =&gt; [],</div><div class="line">]);</div><div class="line">$jobs = $client-&gt;setKeyword(<span class="string">'training'</span>)</div><div class="line">   -&gt;setLocation(<span class="string">'chicago, il'</span>)</div><div class="line">   -&gt;setPage(<span class="number">1</span>, <span class="number">10</span>)</div><div class="line">   -&gt;getAllJobs();</div></pre></td></tr></table></figure>
-<p>That final <code>$jobs</code> variable contains an array of all jobs matching the provided criteria from <a href="https://github.com/jobapis/jobs-dice" target="_blank" rel="external">Dice</a>, <a href="https://github.com/jobapis/jobs-govt" target="_blank" rel="external">Government Jobs</a>, and <a href="https://github.com/jobapis/jobs-github" target="_blank" rel="external">Github</a> in one go.</p>
+<figure class="highlight php"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">$client = <span class="keyword">new</span> JobsMulti([</div><div class="line">    <span class="string">'Govt'</span> =&gt; [],</div><div class="line">    <span class="string">'Github'</span> =&gt; [],</div><div class="line">]);</div><div class="line">$jobs = $client-&gt;setKeyword(<span class="string">'training'</span>)</div><div class="line">   -&gt;setLocation(<span class="string">'chicago, il'</span>)</div><div class="line">   -&gt;setPage(<span class="number">1</span>, <span class="number">10</span>)</div><div class="line">   -&gt;getAllJobs();</div></pre></td></tr></table></figure>
+<p>That final <code>$jobs</code> variable contains an array of all jobs matching the provided criteria from <a href="https://github.com/jobapis/jobs-govt" target="_blank" rel="external">Government Jobs</a> and <a href="https://github.com/jobapis/jobs-github" target="_blank" rel="external">Github</a> in one go.</p>
 <p>You can access more providers and you also have the option to query each one individually. See the <a href="https://github.com/jobapis/jobs-multi" target="_blank" rel="external">jobs-multi repo on Github for more details</a>.</p>
 
 
