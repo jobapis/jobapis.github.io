@@ -6,13 +6,14 @@ date: 2016-08-21 14:18:39
 We maintain dozens of free open source projects for software developers interested in jobs and job board APIs. Below are some highlights, but you can find more on [Github](https://github.com/jobapis). 
 
 ## [JobsToMail](https://github.com/jobapis/jobs-to-mail)
-JobsToMail is like having a personal assistant for your job search.
+JobsToMail is like having a personal assistant for your job search. Just sign up, choose the search term and location you’d like to search, and jobs will be sent to you every day. JobsToMail is open source, so you can deploy it to your own server completely free of charge.
 
-Just sign up at [JobsToMail.com](http://www.jobstomail.com/), choose the search term and location you’d like to search, and we’ll send you new job listings every day.
+[JobsToMail on Github](https://github.com/jobapis/jobs-to-mail)
 
-Alternatively, JobsToMail is open source, so you can deploy it to your own server completely free of charge.
+## [Jobs Collector](https://github.com/jobapis/collector)
+The jobs collector grabs the latest jobs from all job boards supported by JobsMulti (see below) and saves them to Algolia for rapid searching capabilities.
 
-[JobsToMail on Github](https://github.com/jobapis/jobs-to-mail) | [JobsToMail.com](http://www.jobstomail.com/)
+[Jobs Collector Blog Post](/2017/11/27/job-collector-open-sourced/) | [Jobs Collector on Github](https://github.com/jobapis/collector)
 
 ## [JobsMulti](https://github.com/jobapis/jobs-multi)
 JobsMulti is the ultimate job board API client. With this package, PHP developers can access multiple job board APIs with a single client and a few lines of code. Currently supports over 12 job boards.
