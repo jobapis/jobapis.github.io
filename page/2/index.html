@@ -167,6 +167,33 @@
             <h3 style="color:#999">Latest News:</h3>
             
                 <div class="post-preview">
+    <a href="/2016/12/01/jobs-multi-v1/">
+        <h2 class="post-title">
+            JobsMulti - the Ultimate Job Board API Client - Version 1.0 Release
+        </h2>
+        
+    </a>
+    <p class="post-meta">
+        <!-- Date and Author -->
+        
+        2016-12-01
+    </p>
+    <!-- Post Main Content -->
+    <div>
+        <p>Today we are excited to announce the release of version 1.0, the first stable release, of <a href="https://github.com/jobapis/jobs-multi" target="_blank" rel="external">JobsMulti</a>.</p>
+<h2 id="What-is-JobsMulti"><a href="#What-is-JobsMulti" class="headerlink" title="What is JobsMulti?"></a>What is <a href="https://github.com/jobapis/jobs-multi" target="_blank" rel="external">JobsMulti</a>?</h2><p>JobsMulti is the ultimate job board API client. With a few lines of code, you can grab the latest jobs from up to 13 job boards (as of this writing), with our list of supported job boards growing every month. So, instead of writing code to query each job board individually, developers can get results from multiple job boards with just one client.</p>
+<p>The code speaks for itself, so here’s an example of using JobsMulti v.1.0:</p>
+<figure class="highlight php"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// Include as many or as few providers as you want. Just be sure to include any required keys.</span></div><div class="line">$providers = [</div><div class="line">    <span class="string">'Careerbuilder'</span> =&gt; [</div><div class="line">        <span class="string">'DeveloperKey'</span> =&gt; <span class="string">'&lt;YOUR DEVELOPER KEY&gt;'</span>,</div><div class="line">    ],</div><div class="line">    <span class="string">'Careercast'</span> =&gt; [],</div><div class="line">    <span class="string">'Careerjet'</span> =&gt; [</div><div class="line">        <span class="string">'affid'</span> =&gt; <span class="string">'&lt;YOUR AFFILIATE ID&gt;'</span>,</div><div class="line">    ],</div><div class="line">    <span class="string">'Github'</span> =&gt; [],</div><div class="line">    <span class="string">'Govt'</span> =&gt; [],</div><div class="line">    <span class="string">'Ieee'</span> =&gt; [],</div><div class="line">    <span class="string">'Indeed'</span> =&gt; [</div><div class="line">        <span class="string">'publisher'</span> =&gt; <span class="string">'&lt;YOUR PUBLISHER ID&gt;'</span>,</div><div class="line">    ],</div><div class="line">    <span class="string">'Jobinventory'</span> =&gt; [],</div><div class="line">    <span class="string">'Juju'</span> =&gt; [</div><div class="line">        <span class="string">'partnerid'</span> =&gt; <span class="string">'&lt;YOUR PARTNER ID&gt;'</span>,</div><div class="line">    ],</div><div class="line">    <span class="string">'Stackoverflow'</span> =&gt; [],</div><div class="line">    <span class="string">'Usajobs'</span> =&gt; [</div><div class="line">        <span class="string">'AuthorizationKey'</span> =&gt; <span class="string">'&lt;YOUR API KEY&gt;'</span>,</div><div class="line">    ],</div><div class="line">    <span class="string">'Ziprecruiter'</span> =&gt; [</div><div class="line">        <span class="string">'api_key'</span> =&gt; <span class="string">'&lt;YOUR API KEY&gt;'</span>,</div><div class="line">    ],</div><div class="line">];</div><div class="line"></div><div class="line"><span class="comment">// Instantiate a new JobsMulti client</span></div><div class="line">$client = <span class="keyword">new</span> JobsMulti($providers);</div><div class="line"></div><div class="line"><span class="comment">// Set the parameters: Keyword, Location, Page</span></div><div class="line">$client-&gt;setKeyword(<span class="string">'engineering'</span>)</div><div class="line">    -&gt;setLocation(<span class="string">'chicago, il'</span>)</div><div class="line">    -&gt;setPage(<span class="number">1</span>, <span class="number">10</span>);</div><div class="line"></div><div class="line"><span class="comment">// And include an array of options if you'd like</span></div><div class="line">$options = [</div><div class="line">    <span class="string">'maxAge'</span> =&gt; <span class="number">30</span>,              <span class="comment">// Maximum age (in days) of listings</span></div><div class="line">    <span class="string">'maxResults'</span> =&gt; <span class="number">100</span>,         <span class="comment">// Maximum number of results</span></div><div class="line">    <span class="string">'orderBy'</span> =&gt; <span class="string">'datePosted'</span>,   <span class="comment">// Field to order results by</span></div><div class="line">    <span class="string">'order'</span> =&gt; <span class="string">'desc'</span>,           <span class="comment">// Order ('asc' or 'desc')</span></div><div class="line">];</div><div class="line"></div><div class="line"><span class="comment">// Finally, get all the jobs in a single Collection</span></div><div class="line">$jobs = $client-&gt;getAllJobs($options);</div></pre></td></tr></table></figure>
+<p>More details can be found on the <a href="/open-source/jobs-multi">JobsMulti landing page</a> and in the <a href="https://github.com/jobapis/jobs-multi/blob/master/README.md" target="_blank" rel="external">Readme</a>. This project is free and open source, so if it helps you out, let us hear about it on Twitter: <a href="https://twitter.com/jobapis" target="_blank" rel="external">@jobapis</a>.</p>
+
+
+        
+    </div>
+</div>
+<hr>
+
+            
+                <div class="post-preview">
     <a href="/2016/11/29/stackoverflow/">
         <h2 class="post-title">
             Stack Overflow Job Board Client
@@ -438,37 +465,6 @@
 <h3 id="Clone-the-project-and-run-it-on-your-own-servers"><a href="#Clone-the-project-and-run-it-on-your-own-servers" class="headerlink" title="Clone the project and run it on your own servers"></a>Clone the project and run it on your own servers</h3><p>If you’re a developer or you want to customize the project to meet your needs, feel free. Just <a href="https://github.com/jobapis/jobs-to-mail" target="_blank" rel="external">clone the project on Github</a> and set it up to run on your local computer or your own servers. The public project is currently hosted on Heroku, so getting it set up there should be a cinch.</p>
 <h3 id="Make-a-suggestion-or-report-an-issue-on-Github"><a href="#Make-a-suggestion-or-report-an-issue-on-Github" class="headerlink" title="Make a suggestion or report an issue on Github"></a>Make a suggestion or report an issue on Github</h3><p>Finally, because the project is open source, you’re welcome to <a href="https://github.com/jobapis/jobs-to-mail/issues" target="_blank" rel="external">submit an issue</a> or <a href="https://github.com/jobapis/jobs-to-mail/pulls" target="_blank" rel="external">pull request</a> to improve the project.</p>
 <p>I’m looking forward to hearing from users. If you find this project useful or you have ideas, just <a href="http://www.jobapis.com/contact/" target="_blank" rel="external">let me know</a>.</p>
-
-
-        
-    </div>
-</div>
-<hr>
-
-            
-                <div class="post-preview">
-    <a href="/2016/09/22/careercast-jobs-api/">
-        <h2 class="post-title">
-            CareerCast API v1.0 Release Announcement
-        </h2>
-        
-    </a>
-    <p class="post-meta">
-        <!-- Date and Author -->
-        
-        2016-09-22
-    </p>
-    <!-- Post Main Content -->
-    <div>
-        <p>The latest job board now supporting <a href="https://github.com/jobapis/jobs-common" target="_blank" rel="external">version 2.0 of the Jobs Common project</a> is the re-released <a href="https://github.com/jobapis/jobs-careercast" target="_blank" rel="external">Careercast API client</a>, which just reached version 1.0 today.</p>
-<p>This re-release offers most of the same functionality as the version 0 release, but defaults to JSON responses instead of XML. This allows for much richer data from the Careercast API.</p>
-<p>Unfortunately, Careercast’s API is not official or documented, so the setters are limited, and it appears that pagination doesn’t work.</p>
-<p>The basic usage is the same as most of our other providers:</p>
-<h3 id="1-Install-the-package-via-Composer"><a href="#1-Install-the-package-via-Composer" class="headerlink" title="1. Install the package via Composer"></a>1. Install the package via Composer</h3><p><code>composer require jobapis/jobs-careercast</code></p>
-<h3 id="2-Create-a-query-object-with-all-API-parameters"><a href="#2-Create-a-query-object-with-all-API-parameters" class="headerlink" title="2. Create a query object with all API parameters"></a>2. Create a query object with all API parameters</h3><figure class="highlight php"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">$query = <span class="keyword">new</span> JobApis\Jobs\Client\Queries\CareercastQuery([</div><div class="line">    <span class="string">'keyword'</span> =&gt; <span class="string">'engineering'</span>,</div><div class="line">    <span class="string">'location'</span> =&gt; <span class="string">'Chicago, IL'</span>,</div><div class="line">]);</div></pre></td></tr></table></figure>
-<h3 id="3-Inject-the-query-object-and-get-jobs"><a href="#3-Inject-the-query-object-and-get-jobs" class="headerlink" title="3. Inject the query object and get jobs"></a>3. Inject the query object and get jobs</h3><figure class="highlight php"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">$client = <span class="keyword">new</span> JobApis\Jobs\Client\Provider\CareercastProvider($query);</div><div class="line">$jobs = $client-&gt;getJobs();</div></pre></td></tr></table></figure>
-<p>This will return a <a href="https://github.com/jobapis/jobs-common/blob/master/src/Collection.php" target="_blank" rel="external">Collection</a> of <a href="https://github.com/jobapis/jobs-common/blob/master/src/Job.php" target="_blank" rel="external">Job</a> objects.</p>
-<p>For more detailed usage and documentation, see <a href="https://github.com/jobapis/jobs-careercast#usage" target="_blank" rel="external">this project’s readme</a></p>
 
 
         
